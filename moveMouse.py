@@ -11,7 +11,7 @@ while True:
   hour = mTime // 3600
   min = mTime % 3600 // 60
   sec = mTime % 60
-  if (min % 1 == 0) and (min > 0) and (printTime != min):
+  if (min % 5 == 0) and (min > 0) and (printTime != min):
     print("you have been touching fish for", hour, "h", min, "min", sec, "s")
     printTime = min
   try:
