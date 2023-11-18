@@ -12,8 +12,8 @@ while True:
     min = mTime % 3600 // 60
     sec = mTime % 60
     print("you have been touching fish for %d h %d min % s" % hour % min % sec)
-    try:
-      pyautogui.moveTo(x=random.randint(100, 900), y=random.randint(100, 900))
-      pyautogui.press("ctrl")
-    except:
-      print("something error!")
+  try:
+    pyautogui.moveTo(x=random.randint(100, 900), y=random.randint(100, 900))
+    pyautogui.press("ctrl")
+  except:
+    print("something error!")
