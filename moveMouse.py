@@ -6,7 +6,7 @@ print("have fun")
 sTime = time.time()
 while True:
   time.sleep(5)
-  mTime = (int)(time.time() - sTime)  +47843
+  mTime = (int)(time.time() - sTime)  
   hour = mTime // 3600
   min = mTime % 3600 // 60
   sec = mTime % 60
