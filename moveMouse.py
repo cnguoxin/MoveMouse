@@ -6,6 +6,7 @@ import pynput
 m_pause = False
 # app run time without pause time
 printTime = 0
+(oldHour, oldMin) = (-1, -1)
 # pause with no operator time
 bTime = 0
 # ctrl mouse instance
@@ -78,8 +79,10 @@ while True:
     printTime += 5
     hour = printTime // 3600
     min = printTime % 3600 // 60
-    if (min % 5 == 0) and (min > 0 or hour > 0) and (printTime != min):
+    if (min % 5 == 0) and (min > 0 or hour > 0) and (hour + min * 60 != oldHour + oldMin * 60):
       print("you have been touching fish for", hour, "h", min, "min.")
+      oldMin = min
+      oldHour = hour
 
     # move mouse and press ctrl
     try:
