@@ -80,7 +80,6 @@ while True:
     min = printTime % 3600 // 60
     if (min % 5 == 0) and (min > 0 or hour > 0) and (printTime != min):
       print("you have been touching fish for", hour, "h", min, "min.")
-      printTime = min
 
     # move mouse and press ctrl
     try:
